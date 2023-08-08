@@ -1,0 +1,150 @@
+MongoDB Installation (non admin, zipped):-
+----------------------------------------
+
+NOTE: "ProgramFilesAll" can be any folder
+
+1> Download  mongodb-windows-x86_64-6.0.8.zip from internet and extract it to C:\ProgramFilesAll\mongodb-win32-x86_64-windows-6.0.8
+2> Download mongosh-1.10.1-win32-x64.zip and extract it and merge it to C:\ProgramFilesAll\mongodb-win32-x86_64-windows-6.0.8. This means that bin is also merged to single folder. Only readme file is common which doesnot matter.
+So now our folder structure looks like:-
+
+C:\ProgramFilesAll\mongodb-win32-x86_64-windows-6.0.8>tree /f
+Folder PATH listing for volume System
+Volume serial number is BAC9-BC44
+C:.
+│   LICENSE-Community.txt
+│   LICENSE-crypt-library
+│   LICENSE-mongosh
+│   mongosh.1.gz
+│   MPL-2
+│   README
+│   THIRD-PARTY-NOTICES
+│   THIRD_PARTY_NOTICES
+│
+└───bin
+        Install-Compass.ps1
+        mongod.exe
+        mongod.pdb
+        mongos.exe
+        mongos.pdb
+        mongosh.exe
+        mongosh_crypt_v1.dll
+        vc_redist.x64.exe
+
+3> Create data, data\db, log directories and mongo.config file under C:\mongodb.
+Add the following lines in "mongo.config" file
+
+port=27017
+dbpath=C:\mongodb\data\db\
+logpath=C:\mongodb\log\mongo.log
+
+4> Start server (no username and password):
+mongod.exe --config="C:\mongodb\mongo.config"
+
+5> To stop mongodb server press Ctrl+C
+
+=========================================================================================
+
+Connect to Mongodb server via mongodb shell (mongosh):-
+-----------------------------------------------------
+
+MAKE SURE THAT SERVER IS ALREADY RUNNING
+
+Connect to localhost MongoDB server via command line (no username and password)
+mongosh --port 27017
+
+OR If you connect to remote MongoDB server via command line with authentication.
+mongosh --username abcd --password abc123 --host server_ip_or_dns --port 27017
+
+But for now we will go with localhost server without authentication.
+
+TO DISCONNECT/STOP SHELL:-
+Ctrl+C / exit
+
+=========================================================================================
+
+SOME SAMPLE COMMANDS TO TEST
+----------------------------
+
+> command to show databases
+show dbs;
+
+> create a new database 'cruddb' and switch
+use cruddb;
+
+> show collections in database
+show collections;
+
+> create table
+cruddb> db.createCollection('users')
+{ ok: 1 }
+
+> show tables
+cruddb> show collections;
+users
+
+> insert data in table
+cruddb> db.users.insertOne({ name: "John Doe", email: "john@gmail.com", phone: "988323232"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("64ce8a94f9307a7ba701bd59")
+}
+
+> view table content
+cruddb> db.users.find().pretty()
+
+
+
+
+
+=========================================================================================
+
+PURGE DATABASE
+--------------
+Remove content of folder (when db server is not running)
+C:\mongodb\data\db\
+
+
+
+=========================================================================================
+
+CONNECTION STRING FORMATS
+https://www.mongodb.com/docs/manual/reference/connection-string/
+
+MONGODB ATLAS FOR HOSTING DB FREELY OVER INTERNET
+https://www.mongodb.com/docs/atlas/getting-started/
+
+12 MongoDB commands you should know
+https://www.educative.io/answers/12-basic-mongodb-commands
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===================================================================================
+
+

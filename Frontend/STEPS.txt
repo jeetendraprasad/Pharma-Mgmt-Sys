@@ -1,0 +1,8 @@
+2> Open command Prompt
+
+3> (In command prompt)
+cd /d Q:\HOMEPATH\github\React-Inventory-Management-System\Frontend
+
+npm i
+
+npm start
