@@ -1,4 +1,4 @@
-# Fharmacy Management System
+# Pharmacy Management System
 Inventory Management System Built with React JS, Node JS, Express JS, MongoDB and Tailwind CSS.
 
 NOTE: KINDLY DONT FORK THIS AS THIS WILL BE UNSTABLE FOR A WHILE.
