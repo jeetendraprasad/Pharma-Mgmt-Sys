@@ -156,13 +156,13 @@ export default function AddStore() {
                                 })
                               }
                             >
-                              <option selected="" value="Electronics">
-                                Electronics
+                              <option selected="" value="Ayurvedic">
+                                Ayurvedic
                               </option>
-                              <option value="Groceries">Groceries</option>
-                              <option value="Wholesale">WholeSale</option>
-                              <option value="SuperMart">SuperMart</option>
-                              <option value="Phones">Phones</option>
+                              <option value="Allopathic">Allopathic</option>
+                              <option value="Homeopathic">Homeopathic</option>
+                              <option value="General">General</option>
+                              <option value="Naturopathic">Naturopathic</option>
                             </select>
                           </div>
                           <div className="sm:col-span-2">

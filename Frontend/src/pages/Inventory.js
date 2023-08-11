@@ -94,7 +94,7 @@ function Inventory() {
           <div className=" flex flex-col md:flex-row justify-center items-center  ">
             <div className="flex flex-col p-10  w-full  md:w-3/12  ">
               <span className="font-semibold text-blue-600 text-base">
-                Total Products
+                Total Medicines
               </span>
               <span className="font-semibold text-gray-600 text-base">
                 {products.length}

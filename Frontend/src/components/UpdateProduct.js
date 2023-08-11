@@ -82,7 +82,7 @@ export default function UpdateProduct({
                         as="h3"
                         className="text-lg font-semibold leading-6 text-gray-900 "
                       >
-                        Update Product
+                        Update Medicine
                       </Dialog.Title>
                       <form action="#">
                         <div className="grid gap-4 mb-4 sm:grid-cols-2">
@@ -102,7 +102,7 @@ export default function UpdateProduct({
                                 handleInputChange(e.target.name, e.target.value)
                               }
                               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                              placeholder="Ex. Apple iMac 27&ldquo;"
+                              placeholder="Ex. Paracetamol tablet 500mg&ldquo;"
                             />
                           </div>
                           <div>
@@ -121,7 +121,7 @@ export default function UpdateProduct({
                                 handleInputChange(e.target.name, e.target.value)
                               }
                               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                              placeholder="Ex. Apple"
+                              placeholder="Ex. Cipla"
                             />
                           </div>
                           <div className="sm:col-span-2">
@@ -155,7 +155,7 @@ export default function UpdateProduct({
                             type="submit"
                             className="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                           >
-                            Update product
+                            Update medicine
                           </button> */}
                           {/* <button
                             type="button"
@@ -186,7 +186,7 @@ export default function UpdateProduct({
                     className="inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 sm:ml-3 sm:w-auto"
                     onClick={updateProduct}
                   >
-                    Update Product
+                    Update Medicine
                   </button>
                   <button
                     type="button"

@@ -227,7 +227,7 @@ function Dashboard() {
 
           <div>
             <strong className="block text-sm font-medium text-gray-500">
-              Total Products
+              Total Medicines
             </strong>
 
             <p>
