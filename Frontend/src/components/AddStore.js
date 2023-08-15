@@ -3,6 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { PlusIcon } from "@heroicons/react/24/outline";
 import UploadImage from "./UploadImage";
 import AuthContext from "../AuthContext";
+import constants from "../constants";
 
 export default function AddStore() {
   const authContext = useContext(AuthContext);
@@ -23,7 +24,7 @@ export default function AddStore() {
   const cancelButtonRef = useRef(null);
 
   const addProduct = () => {
-    fetch("http://localhost:4000/api/store/add", {
+    fetch(constants.appUrl + "/api/store/add", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
